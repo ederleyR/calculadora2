@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="display">
+            <input type="text" id="resultado" value="0" readonly>
+        </div>
+        <div class="botones">
+
+            <button onclick="ClearALL()">C</button>
+            <button onclick="DeleteLast()">←</button>
+            <button onclick="Porcentaje()">%</button>
+            <button onclick="AgregarOperador('/')">/</button>
+
+            <button onclick="AgregarNumero('7')">7</button>
+            <button onclick="AgregarNumero('8')">8</button>
+            <button onclick="AgregarNumero('9')">9</button>
+            
+            <button onclick="AgregarOperador('x')">x</button>
+
+            <button onclick="AgregarNumero('4')">4</button>
+            <button onclick="AgregarNumero('5')">5</button>
+            <button onclick="AgregarNumero('6')">6</button>
+
+            <button onclick="AgregarOperador('-')">-</button>
+
+            <button onclick="AgregarNumero('1')">1</button>
+            <button onclick="AgregarNumero('2')">2</button>
+            <button onclick="AgregarNumero('3')">3</button>
+
+            <button onclick="AgregarOperador('+')">+</button>
+
+            <button onclick="AgregarNumero('0')">0</button>
+            <button onclick="AgregarDecimal()">.</button>
+            <button onclick="Evaluar()">=</button>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
