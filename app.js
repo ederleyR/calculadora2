@@ -48,18 +48,6 @@ function DeleteLast() {
     }
     pantalla.value = current;
 }
-
-function Porcentaje() {
-    try {
-        let numero = parseFloat(current);
-        if (isNaN(numero)) throw new Error("Expresión inválida");
-        current = (numero / 100).toString();
-        pantalla.value = current;
-    } catch {
-        pantalla.value = "Error";
-    }
-}
-
 function Evaluar() {
     let expresion = current.replace(/x/g, "*"); 
 
@@ -67,6 +55,17 @@ function Evaluar() {
       
         if (expresion.includes("/0")) {
             throw new Error("División por cero");
+        }
+        if(expresion.includes ("%")) {
+            try {
+                let numero = parseFloat(current);
+                if (isNaN(numero)) throw new Error("Expresión inválida");
+                current = (numero / 100).toString();
+                pantalla.value = current;
+            } catch (error) {
+                pantalla.value = "Error";
+            }
+            return;
         }
 
         let resultado = eval(expresion);  
