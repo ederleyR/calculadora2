@@ -39,18 +39,14 @@ button {
     cursor: pointer;
     transition: 0.2s;
     font-weight: bold;
-    color : white;
+    color : black;
 }
-.AgregarNumero {
+#AgregarNumero {
     background: #333;
 }
-.operador {
+#operador {
     background: #b4d7ff;
 }
 button:hover {
     opacity: 0.5;
-}
-button.operador:nth-last-child(1) {
-    grid-column: span 2;
-    background:#6774e9;
-}
+
